@@ -4,6 +4,7 @@
   "description": "JWT-based authentication with lowdb",
   "main": "index.js",
   "scripts": {
+    "seed": "node src/database/seeders/database_seeder.js",
     "dev": "nodemon src/index.js --ignore db.json",
     "start": "node src/index.js"
   },

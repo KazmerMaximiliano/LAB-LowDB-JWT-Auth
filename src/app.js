@@ -31,7 +31,7 @@ const specs = swaggerJsDoc(options);
 
 app.use(express.json());
 app.use(morgan("dev"));
-app.use("/", swaggerUI.serve, swaggerUI.setup(specs));
+app.use("/docs", swaggerUI.serve, swaggerUI.setup(specs));
 
 app.use(authRoutes);
 

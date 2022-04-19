@@ -9,7 +9,7 @@ const users = [
   },
 ];
 
-export const migrateUsers = async () => {
+export const usersSeeder = async () => {
   await createConnection();
   const db = getConnection();
 
