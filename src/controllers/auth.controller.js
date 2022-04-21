@@ -16,7 +16,9 @@ export const login = async (req, res) => {
         token: null,
       });
     } else {
-      if (bcrypt.compare(user.password, password)) {
+      const isMatch = await bcrypt.compare(password, user.password);
+
+      if (isMatch) {
         const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
           expiresIn: 60 * 60 * 24,
         });
